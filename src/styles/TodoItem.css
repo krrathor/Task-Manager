@@ -1,0 +1,96 @@
+/* Custom CSS for the TodoItem component */
+.todo-item-container {
+  display: flex;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(204, 190, 215, 0.7);
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  flex-wrap: wrap; /* Allow content to wrap when needed */
+}
+
+.todo-item-container.completed {
+  background-color: rgba(198, 233, 167, 0.7);
+}
+
+.task-checkbox {
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  width: 100%; /* Ensure task details take full available space */
+}
+
+.task-input,
+.task-textarea,
+.task-date-input,
+.task-priority-input {
+  width: 100%; /* Ensure all inputs take up full width */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box; /* Prevent overflow */
+  margin-bottom: 10px;
+}
+
+.task-input:focus,
+.task-textarea:focus,
+.task-date-input:focus,
+.task-priority-input:focus {
+  border-color: #4f9c2d; /* Green border on focus */
+}
+
+.task-input.editable,
+.task-textarea.editable {
+  background-color: #1c2a3b;
+}
+
+/* Edit and delete buttons */
+.edit-btn,
+.delete-btn {
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 8px; /* Square corners for buttons */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: auto;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styling for textarea to prevent overflow and allow vertical expansion */
+.task-textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  max-height: 200px; /* Set a maximum height */
+  min-height: 60px; /* Set a minimum height */
+  width: 100%; /* Ensure it stretches across full width */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.task-textarea:focus {
+  border-color: #4f9c2d; /* Green border when focused */
+}
+
+.task-textarea.editable {
+  background-color: #1c2a3b; /* Dark background when editable */
+}
